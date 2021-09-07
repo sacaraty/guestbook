@@ -21,5 +21,9 @@ services:
             - '../src/Kernel.php'
             - '../src/Tests/'
 
+    App\Controller\LuckyController:
+        autowire: true # or define your controller constructor and configure its arguments explicitly
+        tags: ['controller.service_arguments']
+        
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
